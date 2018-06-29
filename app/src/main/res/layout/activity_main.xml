@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAMPLE TEXT"
+        android:textAlignment="center"/>
+
     <com.mxn.soul.flowingdrawer_core.FlowingDrawer
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +22,7 @@
         android:clipToPadding="false"
         app:edPosition="1"
         app:edMenuSize="260dp"
-        app:edMenuBackground="#b083e1">
+        app:edMenuBackground="#dad3e2">
 
         <!--content-->
         <RelativeLayout
@@ -30,10 +36,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <FrameLayout
                 android:id="@+id/id_container_menu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:menu="@menu/activity_menu"/>
+
+
 
         </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
 
