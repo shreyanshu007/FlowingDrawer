@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SAMPLE TEXT"
-        android:textAlignment="center"/>
-
     <com.mxn.soul.flowingdrawer_core.FlowingDrawer
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +22,15 @@
         <RelativeLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+        </RelativeLayout>
 
         <!--menu-->
         <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
@@ -49,7 +51,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:fitsSystemWindows="true"
-                app:menu="@menu/activity_menu"/>
+                app:menu="@menu/activity_menu">
+
+            </android.support.design.widget.NavigationView>
 
 
 
